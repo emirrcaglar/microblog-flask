@@ -103,7 +103,6 @@ class Post(db.Model):
         index=True, default=lambda: datetime.now(timezone.utc))
     user_id: so.Mapped[int] = so.mapped_column(sa.ForeignKey(User.id),
                                                index=True)
-
     author: so.Mapped[User] = so.relationship(back_populates='posts')
 
     def __repr__(self):

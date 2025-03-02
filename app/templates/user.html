@@ -36,4 +36,12 @@
     {% for post in posts %}
         {% include "_post.html" %}
     {% endfor %}
+
+    {% if prev_url %}
+        <a href="{{ prev_url }}"><i>prev</i></a>
+    {% endif %}
+
+    {% if next_url %}
+        <a href="{{ next_url }}"><i>next</i></a>
+    {% endif %}    
 {% endblock %}
